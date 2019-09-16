@@ -1,0 +1,38 @@
+//Not Optimised
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+		Scanner sc = new Scanner(System.in);
+		int cases;
+		cases = sc.nextInt();
+		while(cases>0)
+		{
+		    int n;
+		    n = sc.nextInt();
+		    int[] arr = new int[n];
+		    for(int i=0;i<n;i++)
+		        arr[i]=sc.nextInt();
+		    int max = -9999;
+		    for(int i=0;i<n;i++)
+		    {
+		        int temp = 0;
+
+		        for(int j=i;j<n;j++)
+		        {
+                    //for(int k=i;k<=j;k++)
+                        temp+=arr[j];
+                    if(temp>max)
+                    max=temp;
+		        }
+		    }
+		    System.out.println(max);
+		    cases--;
+		}
+	}
+}
