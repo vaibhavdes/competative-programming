@@ -1,0 +1,31 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+    public static int findMissing(int[] arr)
+    {
+        int n = arr.length+1;
+        int sum = (n)*(n+1)/2;
+        for(int i=0;i<n-1;i++)
+            sum = sum-arr[i];
+        return sum;
+    }
+	public static void main (String[] args) {
+		//code
+		Scanner sc = new Scanner(System.in);
+		int cases;
+		cases = sc.nextInt();
+		while(cases>0)
+		{
+		    int n = sc.nextInt();
+		    int[] arr = new int[n-1];
+		    for(int i=0;i<n-1;i++)
+		        arr[i] = sc.nextInt();
+		    System.out.println(findMissing(arr));
+		    cases--;
+		}
+	}
+}
