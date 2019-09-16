@@ -1,3 +1,11 @@
+/*
+
+Approach
+Failed Cases:
+	1) Consider First ele. of array is 1 and it goes till 'n' now iterate and such that (index+1)=current+1
+		(What if initial element of array in not 1)
+*/
+
 /*package whatever //do not write package name here */
 
 import java.util.*;
