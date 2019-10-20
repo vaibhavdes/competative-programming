@@ -1,8 +1,10 @@
 # Python code to Reverse each word 
 # of a Sentence individually
 
+# Package for Regular Expression Comparison
 import re
 
+# Check whether string is pure alphabetically or contain special character
 def check(text):
     regex = re.compile('[@_!#$%^&*()<>?/\|}{~:.]')
     if(regex.search(text) == None):
@@ -10,9 +12,11 @@ def check(text):
     else:
         return False
 
+# Rever the String
 def mirror(a):
     return a[::-1]
 
+# Iterate till Special Character, form the Word from characters appended, reverse it and append the character at same position
 def reverse(text):
     TEMP = list(text)
     LENGTH = len(TEMP)
