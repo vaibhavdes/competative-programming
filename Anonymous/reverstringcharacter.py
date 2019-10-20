@@ -56,7 +56,7 @@ def reverseWordSentence(Sentence):
 	return newSentence 
 
 # Driver's Code 
-Sentence = "We are at Inginite Solutions! Their email-id is careers@ignitesol.com"
+Sentence = "We are at Something! Their email-id is vaibhavdesign@gmail.com"
 # Calling the reverseWordSentence 
 # Function to get the newSentence 
 print(reverseWordSentence(Sentence))
