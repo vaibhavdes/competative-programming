@@ -13,10 +13,38 @@ Input: address = "255.100.50.0"
 Output: "255[.]100[.]50[.]0"
 
 
-
+//Java
 class Solution {
     public String defangIPaddr(String address) {
         String defangAddress = address.replaceAll("\\.","[.]");
         return defangAddress;
+    }
+}
+
+//C++
+class Solution {
+    public String defangIPaddr(String address) {
+        return regex_replace(address,regex("\\."),"[.]");
+    }
+}
+
+//Java Fast Solution
+
+class Solution {
+    public String defangIPaddr(String address) {
+        StringBuilder sb = new StringBuilder();
+        char[] defangAddress = address.toCharArray();
+        for(int i=0; i<defangAddress.length;i++)
+        {
+            if(defangAddress[i]=='.')
+            {
+                sb.append("[.]");
+            }
+            else
+            {
+                sb.append(defangAddress[i]);
+            }
+        }
+        return sb.toString();
     }
 }
