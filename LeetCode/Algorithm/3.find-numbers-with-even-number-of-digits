@@ -53,3 +53,30 @@ class Solution {
         return i;
     }
 }
+
+//Requires Less Memory
+class Solution {
+    public int findNumbers(int[] nums) {
+        int evens = 0;
+        for(int n : nums)
+        {
+            if(Integer.toString(n).length()%2==0)
+                evens++;
+        }
+        return evens;
+    }
+}
+
+//Math
+class Solution {
+    public int findNumbers(int[] nums) {
+        int evens = 0;
+        for(int n : nums)
+        {
+            int length = (int)(Math.log10(n)+1);
+            if(length%2==0)
+                evens++;
+        }
+        return evens;
+    }
+}
