@@ -20,7 +20,23 @@ Explanation 2:
     
   */
   
-  
+  // JAVA
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int sum = Integer.MIN_VALUE;
+        int temp = 0;
+        for(int i=0; i < nums.length; i++){
+            temp += nums[i];
+            sum = Math.max(sum,temp);
+            if(temp <0 )
+                temp = 0;
+        }
+        return sum;
+    }
+}
+
+// C++ 
+/*
   int Solution::maxSubArray(const vector<int> &A) {
     int sum = INT_MIN;
     int temp = 0;
@@ -32,3 +48,4 @@ Explanation 2:
     }
     return sum;
 }
+*/
