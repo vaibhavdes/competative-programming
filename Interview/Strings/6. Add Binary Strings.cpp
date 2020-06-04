@@ -12,6 +12,7 @@ Return a + b = “111”.
 */
 
 
+
 string Solution::addBinary(string A, string B) {
     reverse(A.begin(), A.end());
     reverse(B.begin(), B.end());
