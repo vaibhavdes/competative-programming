@@ -1,4 +1,4 @@
-
+/*
 Implement strStr().
 
  strstr - locate a substring ( needle ) in a string ( haystack ). 
@@ -10,7 +10,7 @@ Returns the index of the first occurrence of needle in haystack, or -1 if needle
 What should be the return value if the needle is empty?
 What if both haystack and needle are empty?
 For the purpose of this problem, assume that the return value should be -1 in both cases. 
-
+*/
 
 
 int Solution::strStr(const string A, const string B) {
