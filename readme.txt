@@ -8,7 +8,7 @@ Reference Programs from following Web Portals:
   7) TopCoders
   8) SPOJ
   
-Questions of Previous Coding Competitaion with Solution:
+Questions of Previous Coding Competition with Solution:
   1) CodeJam
   2) ACM - ICPC
   3) TechGig
