@@ -15,3 +15,18 @@ The indices are 1 based ( the first element has index 1 instead of index 0).
  Ordering of the result : You should not change the relative ordering of the words / phrases within the group. Within a group containing A[i] and A[j], A[i] comes before A[j] if i < j.
 
 */
+
+vector<vector<int> > Solution::anagrams(const vector<string> &A) {
+    vector<vector<int>> result;
+    map<string, vector<int>> groups;
+    
+    for (auto i = 0; i < A.size(); ++i) {
+        string temp = A[i];
+        sort(temp.begin(), temp.end());
+        groups[temp].emplace_back(i+1);
+    }
+    
+    for (const auto& it : groups)
+        result.emplace_back(move(it.second));
+    return result;
+}
